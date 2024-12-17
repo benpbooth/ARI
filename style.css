@@ -51,8 +51,10 @@ body {
 }
 
 .login-container {
-  margin-left: auto; /* Push to the far right */
-  margin-right: 100px; /* Add space from the right edge */
+  margin-left: auto; /* Push it to the far right */
+  margin-right: 80px; /* Small padding on the right */
+  display: flex;
+  align-items: center; /* Align vertically */
 }
 
 /* Login Button Styling */
@@ -60,7 +62,7 @@ body {
   text-decoration: none; /* Remove underline */
   background-color: #007bff; /* Blue background */
   color: #ffffff; /* White text */
-  font-weight: bold;
+  font-weight: lighter;
   padding: 8px 15px; /* Padding for the button */
   border-radius: 5px; /* Rounded corners */
   transition: background-color 0.3s ease; /* Smooth hover effect */
