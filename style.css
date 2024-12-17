@@ -40,6 +40,16 @@ body {
   letter-spacing: 0.5px; /* Spacing between letters */
   gap: 30px; /* Space between links */
 }
+
+.menu-toggle {
+  display: none; /* Hide by default */
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
 .login-container {
   margin-left: auto; /* Push to the far right */
   margin-right: 100px; /* Add space from the right edge */
@@ -273,43 +283,136 @@ body {
 }
 html {
   scroll-behavior: smooth;
-}
+} 
 @media (max-width: 768px) {
+  
+  body {
+    margin: 0;
+    padding-top: 80px; /* Create space below the fixed header */
+    font-family: 'Inter', sans-serif;
+}
+.main-content {
+  padding-bottom: 150px; /* Add space at the bottom */
+}
+
   .header-banner {
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
+    display: flex; /* Use Flexbox */
+    justify-content: space-between; /* Space between logo and nav */
+    align-items: center; /* Align items vertically */
+    padding: 10px 10px; /* Padding inside the header */
+    background-color: #ffffff; /* White background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    position: fixed; /* Fix header to top */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure it stays above other content */
   }
 
+  .logo {
+    width: 100px; /* Logo size */
+    padding-right: 0px; /* Push to the far left */
+    height: auto;
+  }
+  .menu-toggle {
+    display: block; /* Show hamburger icon */
+    padding-right: 100px;
+    cursor: pointer; /* Indicate it's clickable */
+    font-size: 50px;
+  }
   .nav-links {
-    flex-direction: column;
+    display: none;
+    position: absolute;
+    top: 100%; /* Dropdown below the header */
+    right: 20px; /* Align to the right */
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-direction: column; /* Stack links vertically */
     gap: 10px;
+    padding: 10px 20px;
+    z-index: 1000;
+  }
+  .nav-links.show {
+    display: flex;
+  }
+  .image-container {
+    margin-top: 0; /* Remove any extra margin */
+    display: flex;
+    justify-content: center; /* Center the image */
+  }
+
+  .image-container img {
+    width: 150%; /* Responsive image */
+    max-width: 140px; /* Limit image width */
+    height: auto;
+    border-radius: 10px; /* Optional rounded corners */
   }
 
   .login-container {
-    margin-right: 0;
+    margin-right: 30;
+    padding-left: 500px; /* Small spacing from the edge */
   }
 
   .center-content {
-    padding: 80px 10px 10px 10px;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center-align text */ 
+    gap: 10px; /* Smaller space between items */
+    padding: 40px;
+    margin: 0 auto; /* Center the container */
+    max-width: 90%; /* Make it "wider" without going edge-to-edge */
   }
 
   .text-container h1 {
-    font-size: 28px;
+    font-size: 33px; /* Larger font for visibility */
+    text-align: center;
+    font-weight: bold;
+    color: #000; /* Black color */
+    margin-bottom: 5px;
+    max-width: 600px; /* Restrict width to make it wider but readable */
   }
 
   .text-container h2 {
-    font-size: 18px;
+    font-size: 15px; /* Smaller subheading */
+    text-align: center;
+    font-weight: lighter;
+    color: #4f4f4f; /* Light gray */
+    margin-bottom: 14px;
+    max-width: 700px; /* Match width with H1 */
   }
 
-  .search-prompt {
+  .search-prompt {  
     padding: 0;
+    text-align: center;
+    margin-bottom: 10px;
   }
-
+  
   .search-input {
-    width: 90%;
+    width: 75%; /* Reduce the width to make it smaller */
+    max-width: 500px; /* Add a max-width for control */
+    padding: 8px; /* Reduce padding for a smaller input */
+    font-size: 14px; /* Make the font smaller */
+    border: 1px solid #ccc; /* Optional: Light border */
+    border-radius: 5px; /* Rounded corners */
   }
-
+  
+  .search-button {
+    padding: 8px 12px; /* Adjust button size */
+    font-size: 14px; /* Smaller text */
+    margin-top: 10px; /* Add space between input and button */
+    background-color: #007bff; /* Keep button styling */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .search-button:hover {
+    background-color: #0056b3; /* Darker hover effect */
+  }
   .logo-strip {
     flex-wrap: wrap;
     gap: 10px;
@@ -320,8 +423,10 @@ html {
   }
 
   .carousel-container {
-    position: static;
-    margin: 20px auto;
+    position: auto;
+    margin: 68px;
+        margin-top: 380px; /* Remove any extra space above the carousel */
+    padding-top: 0px; /* Remove extra padding if applied */
   }
 
   .footer {

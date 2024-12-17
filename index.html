@@ -14,17 +14,23 @@
 <body>
     <!-- Header Banner -->
     <header class="header-banner">
-        <img src="photos/Ari_Font-cropped.svg" alt="Logo" class="logo">
-        <nav class="nav-links">
-            <a href="#" class="button">Services</a>
-            <a href="#" class="button">About</a>
-            <a href="#" class="button">Contact</a>
-            <a href="#" class="button">Pricing</a>
-        </nav>
-        <div class="login-container">
-            <a href="#" class="login-button">Login</a>
+        <!-- Logo on the Left -->
+        <div class="logo">
+            <img src="photos/Ari_Font-cropped.svg" alt="Logo" class="logo">
         </div>
-    </header>
+      
+        <!-- Hamburger Menu Icon for Small Screens -->
+        <button class="menu-toggle" aria-label="Menu Toggle">☰</button>
+      
+        <!-- Navigation Links -->
+        <nav class="nav-links">
+          <a href="#">Services</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+          <a href="#">Pricing</a>
+        </nav>
+      </header>
+      
 
     <!-- Main Content -->
     <div class="main-content">
@@ -113,5 +119,15 @@
 
         setInterval(showNextItem, 3000); // Change carousel item every 3 seconds
     </script>
+    <script>
+        // Get the menu toggle button and the navigation links
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+      
+        // Toggle the 'active' class on click
+        menuToggle.addEventListener('click', () => {
+          navLinks.classList.toggle('active');
+        });
+      </script>
 </body>
-</html>
+</html>s
