@@ -427,7 +427,7 @@ html {
   .carousel-container {
     position: auto;
     margin: 68px;
-        margin-top: 380px; /* Remove any extra space above the carousel */
+        margin-top: 450px; /* Remove any extra space above the carousel */
     padding-top: 0px; /* Remove extra padding if applied */
   }
 
