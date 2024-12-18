@@ -320,7 +320,7 @@ html {
     display: block; /* Show hamburger icon */
     padding-right: 100px;
     cursor: pointer; /* Indicate it's clickable */
-    font-size: 50px;
+    font-size: 40px;
   }
   .nav-links {
     display: none;
@@ -427,7 +427,7 @@ html {
   .carousel-container {
     position: auto;
     margin: 68px;
-        margin-top: 450px; /* Remove any extra space above the carousel */
+        margin-top: 550px; /* Remove any extra space above the carousel */
     padding-top: 0px; /* Remove extra padding if applied */
   }
 
